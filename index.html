@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Image Gallery</h1>
+
+  <div class="filter-buttons">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('city')">City</button>
+  </div>
+
+  <div class="gallery">
+    <div class="image nature"><img src="https://tse2.mm.bing.net/th?id=OIP.eGB-8ic41mQhwKGuBt6CjQHaEo&pid=Api&P=0&h=220" alt="Nature" onclick="openLightbox(this)"/></div>
+    <div class="image city"><img src="https://tse2.mm.bing.net/th?id=OIP.k1G1pS8TGf7BV6ralVVAaAHaEv&pid=Api&P=0&h=220" alt="City" onclick="openLightbox(this)"/></div>
+    <div class="image nature"><img src="https://tse4.mm.bing.net/th?id=OIP.ti8BPGsAza9W6AXy4irXgQHaEo&pid=Api&P=0&h=220" alt="Nature" onclick="openLightbox(this)"/></div>
+    <div class="image city"><img src="https://cdn.wallpapersafari.com/41/39/SadjUW.jpg" alt="City" onclick="openLightbox(this)"/></div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close">&times;</span>
+    <img class="lightbox-img" id="lightbox-img" />
+    <button class="prev" onclick="changeImage(-1)">❮</button>
+    <button class="next" onclick="changeImage(1)">❯</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
